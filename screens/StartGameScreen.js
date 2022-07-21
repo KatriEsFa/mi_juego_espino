@@ -13,7 +13,7 @@ const StartGameScreen = props => {
     const [selectedNumber, setSelectedNumber] = useState('');
 
     const handleInputNumber = (text) => {
-        setEnteredValue(text.replace(/[^0-9]/g), "");
+        setEnteredValue(text.replace(/[^0-9]/g, ""));
     };
 
     const cleanInput = () => {
@@ -59,11 +59,11 @@ const StartGameScreen = props => {
                         value={enteredValue}
                     />
                     <View style={styles.buttonsContainer}>
-                        <View stlye={styles.btnStyles}>
+                        <View style={styles.btnStyles}>
                             <Button onPress={cleanInput} color={colors.accent} title="Limpiar" />
                         </View>
 
-                        <View stlye={styles.btnStyles}>
+                        <View style={styles.btnStyles}>
                             <Button onPress={handleConfirmInput} color={colors.primary} title="Confirmar" />
                         </View>
                     </View>
@@ -82,7 +82,8 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 20,
-        marginVertical: 10
+        marginVertical: 10,
+        fontFamily: 'open-sans-bold'
     },
     buttonsContainer: {
         flexDirection: 'row',

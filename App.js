@@ -7,6 +7,10 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 
 export default function App() {
+  const [loaded] = useFonts({
+    OpenSans: require('./assets/fonts/OpenSans-Regular.ttf'),
+    OpenSansBold: require('./assets/fonts/OpenSans-Bold.ttf')
+  })
   const [userNumber, setUserNumber] = useState()
   const handleStartGame = selectedNumber => {
     setUserNumber(selectedNumber)

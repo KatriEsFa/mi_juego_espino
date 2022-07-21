@@ -1,7 +1,7 @@
 import { StyleSheet, TextInput } from "react-native";
 
 const Input = (props) => (
-    <TextInput style={{ ...styles.input, ...props.style }} />
+    <TextInput {...props} style={{ ...styles.input, ...props.style }} />
 )
 
 const styles = StyleSheet.create({
