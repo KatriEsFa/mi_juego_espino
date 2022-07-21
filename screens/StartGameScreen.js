@@ -92,7 +92,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         borderRadius: 15,
         alignContent: 'space-between',
-        backgroundColor: 'black',
         height: 50,
 
     },

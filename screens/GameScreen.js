@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Tex, View } from "react-native"
+import { Button, StyleSheet, Text, View } from "react-native"
 
 import Card from "../components/Card"
 import NumberContainer from "../components/NumberContainer"
@@ -6,17 +6,17 @@ import { render } from "react-dom"
 import { useState } from "react"
 
 const GameScreen = props => {
-    const [currentGuess, setCurrentGuess] = useState(generateRandomBetween(1, 100, props.userOption))
 
     const generateRandomBetween = (min, max, exclude) => {
         min = Math.ceil(min)
         max = Math.floor(max)
-        const rndNum = Math.floor(Mayh.random() * (max - min) + min)
+        const rndNum = Math.floor(Math.random() * (max - min) + min)
         if (rndNum === exclude)
             return generateRandomBetween(min, max, exclude)
         else
             return rndNum
     }
+    const [currentGuess, setCurrentGuess] = useState(generateRandomBetween(1, 100, props.userOption))
 
 
     render(

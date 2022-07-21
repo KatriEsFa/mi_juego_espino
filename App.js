@@ -1,9 +1,11 @@
 import { StyleSheet, View } from 'react-native';
 
+import AppLoading from 'expo-app-loading';
 import GameScreen from './screens/GameScreen';
 import Header from './components/Header';
 import StartGameScreen from './screens/StartGameScreen'
 import { StatusBar } from 'expo-status-bar';
+import { useFonts } from 'expo-font';
 import { useState } from 'react';
 
 export default function App() {
